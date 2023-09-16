@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #f0ecec;
+    background-color: hsla(0, 0%, 5%, 0.71);
+    width: 100vw;
+    height: 100vh;
+    font-size: 3vh;
+}
+
+input {
+    width: 0;
+    height: 0;
+}
+
+.track-container {
+    width: 50%;
+    height: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.track-content {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 500%;
+    height: 100%;
+    transition: 0.6s;
+}
+
+.track-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#on1:checked~.track-container .track-content,
+#on1:checked~.description-container .track-descriptions {
+    margin-left: 0;
+}
+
+#on2:checked~.track-container .track-content,
+#on2:checked~.description-container .track-descriptions {
+    margin-left: -100%;
+}
+
+#on3:checked~.track-container .track-content,
+#on3:checked~.description-container .track-descriptions {
+    margin-left: -200%;
+}
+
+#on4:checked~.track-container .track-content,
+#on4:checked~.description-container .track-descriptions {
+    margin-left: -300%;
+}
+
+#on5:checked~.track-container .track-content,
+#on5:checked~.description-container .track-descriptions {
+    margin-left: -400%;
+}
+
+.description-container {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+.track-descriptions {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 500%;
+    transition: 0.6s;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.track-description {
+    width: 100%;
+}
+
+.overflow {
+    height: 100%;
+    width: 65%;
+    overflow: hidden;
+}
+
+.carousel-point {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: top;
+}
+
+label {
+    display: block;
+    height: 5vh;
+    width: 5vh;
+    transition: 0.6s;
+    cursor: pointer;
+    margin-right: 2%;
+}
+
+label:hover .point {
+    background-color: rgb(123, 122, 122);
+}
+
+label:active .point {
+    background-color: #1d1d1d;
+}
+
+.point {
+    height: 50%;
+    width: 50%;
+    margin: 15%;
+    border-radius: 100%;
+    background-color: rgb(208, 208, 208);
+    transition: 0.6s;
+    border: transparent solid;
+}
+
+.point-item {
+    width: 90%;
+    height: 90%;
+    margin: 4%;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: 0.6s;
+}
+
+#on1:checked~.description-container .carousel-point [for='on1'] .point-item {
+    background-color: hsla(0, 0%, 5%, 0.71);
+}
+
+#on2:checked~.description-container .carousel-point [for='on2'] .point-item {
+    background-color: hsla(0, 0%, 5%, 0.71);
+}
+
+#on3:checked~.description-container .carousel-point [for='on3'] .point-item {
+    background-color: hsla(0, 0%, 5%, 0.71);
+}
+
+#on4:checked~.description-container .carousel-point [for='on4'] .point-item {
+    background-color: hsla(0, 0%, 5%, 0.71);
+}
+
+#on5:checked~.description-container .carousel-point [for='on5'] .point-item {
+    background-color: hsla(0, 0%, 5%, 0.71);
+}
+
+@media screen and (max-width: 930px) {
+    body {
+        font-size: 2.4vh;
+    }
+
+    .description-container {
+        flex-direction: column-reverse;
+        height: 11%;
+    }
+
+    .carousel-point {
+        width: 100%;
+        justify-content: center;
+        vertical-align: bottom;
+        margin-top: 0.7vh;
+    }
+
+    .overflow {
+        width: 100%;
+    }
+}
