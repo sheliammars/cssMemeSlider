@@ -4,46 +4,58 @@
 <head>
     <title>MemeSlider</title>
     <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <div class="container">
-        <input checked type="radio" name="respond" id="desktop">
-        <article id="carousel">
+        <div class="carousel">
             <input checked type="radio" name="carousel" id="on1">
             <input type="radio" name="carousel" id="on2">
             <input type="radio" name="carousel" id="on3">
             <input type="radio" name="carousel" id="on4">
             <input type="radio" name="carousel" id="on5">
 
-            <div id="track">
-                <div id="track-over">
-                    <div class="mems">
-                        <article><img src="assets/img/mem1.jpg"></article>
-                        <article><img src="assets/img/mem2.jpg"></article>
-                        <article><img src="assets/img/mem3.jpg"></article>
-                        <article><img src="assets/img/mem4.jpg"></article>
-                        <article><img src="assets/img/mem5.jpg"></article>
-                    </div>
+            <div id="track" class="track-container">
+                <div class="track-content">
+                    <div class="track-page"><img src="assets/img/mem1.jpg" alt=""></div>
+                    <div class="track-page"><img src="assets/img/mem2.jpg" alt=""></div>
+                    <div class="track-page"><img src="assets/img/mem3.jpg" alt=""></div>
+                    <div class="track-page"><img src="assets/img/mem4.jpg" alt=""></div>
+                    <div class="track-page"><img src="assets/img/mem5.jpg" alt=""></div>
                 </div>
             </div>
-            <div id="point">
-                <label for="on1"></label>
-                <label for="on2"></label>
-                <label for="on3"></label>
-                <label for="on4"></label>
-                <label for="on5"></label>
+            <div id="description" class="description-container">
+                <div class="overflow">
+                    <div class="track-descriptions">
+                        <div class="track-description description1">Ему очень надо было войти</div>
+                        <div class="track-description description2">Нам всем порой не хватает поддержки и мотивации</div>
+                        <div class="track-description description3">Баланс</div>
+                        <div class="track-description description4">...через лес, потом вплавь</div>
+                        <div class="track-description description5">Первый день</div>
+                    </div>
+                </div>
+                <div id="point" class="carousel-point">
+                    <label for="on1" class="point">
+                        <div class="point-item"></div>
+                    </label>
+                    <label for="on2" class="point">
+                        <div class="point-item"></div>
+                    </label>
+                    <label for="on3" class="point">
+                        <div class="point-item"></div>
+                    </label>
+                    <label for="on4" class="point">
+                        <div class="point-item"></div>
+                    </label>
+                    <label for="on5" class="point">
+                        <div class="point-item"></div>
+                    </label>
+                </div>
             </div>
-            <div id="active">
-                <label for="on1"></label>
-                <label for="on2"></label>
-                <label for="on3"></label>
-                <label for="on4"></label>
-                <label for="on5"></label>
-            </div>
-        </article>
+        </div>
     </div>
 </body>
 
