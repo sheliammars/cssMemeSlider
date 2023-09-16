@@ -1,5 +1,5 @@
 * {
-   padding: 0;
+    padding: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -88,7 +88,6 @@ img {
     transition: 0.6s;
     align-items: center;
     flex-grow: 1;
-    /*background-color: rgb(138, 145, 150);*/
 }
 
 .track-description {
@@ -107,7 +106,6 @@ img {
     display: flex;
     justify-content: right;
     align-items: top;
-    /*background-color: rgb(152, 156, 156);*/
 }
 
 label {
@@ -155,7 +153,7 @@ label:active .point {
 }
 
 #on3:checked~.description-container .carousel-point [for='on3'] .point-item {
-    background-color:  hsla(0, 0%, 5%, 0.71);
+    background-color: hsla(0, 0%, 5%, 0.71);
 }
 
 #on4:checked~.description-container .carousel-point [for='on4'] .point-item {
@@ -163,5 +161,27 @@ label:active .point {
 }
 
 #on5:checked~.description-container .carousel-point [for='on5'] .point-item {
-    background-color:  hsla(0, 0%, 5%, 0.71);
+    background-color: hsla(0, 0%, 5%, 0.71);
+}
+
+@media screen and (max-width: 930px) {
+    body {
+        font-size: 2.4vh;
+    }
+
+    .description-container {
+        flex-direction: column-reverse;
+        height: 11%;
+    }
+
+    .carousel-point {
+        width: 100%;
+        justify-content: center;
+        vertical-align: bottom;
+        margin-top: 0.7vh;
+    }
+
+    .overflow {
+        width: 100%;
+    }
 }
